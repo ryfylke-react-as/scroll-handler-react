@@ -20,6 +20,7 @@ const parseTarget = (target: ReactScrollEventTarget) => {
 export const useScrollHandler = (opts: {
   target?: HTMLElement;
   onScroll?: ScrollEffect[];
+  getScrollTop?: () => number;
   between?: {
     after: ReactScrollEventTarget;
     before: ReactScrollEventTarget;
@@ -50,7 +51,10 @@ export const useScrollHandler = (opts: {
   );
 
   React.useEffect(() => {
-    const handler = new ScrollHandler({ target: opts.target });
+    const handler = new ScrollHandler({
+      target: opts.target,
+      getScrollTop: opts.getScrollTop,
+    });
     opts.onScroll?.forEach((effect) => handler.onScroll(effect));
     opts.between?.forEach(({ after, before, effect }) =>
       handler.between(
