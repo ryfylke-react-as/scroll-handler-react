@@ -4,11 +4,16 @@ import {
   BetweenScrollEffect,
 } from "@ryfylke-react/scroll-handler";
 import React from "react";
-
 type ReactScrollEventTarget =
   | React.MutableRefObject<HTMLElement | null>
   | React.RefObject<HTMLElement | null>
   | number;
+
+export {
+  ScrollHandler,
+  ScrollEffect,
+  BetweenScrollEffect,
+} from "@ryfylke-react/scroll-handler";
 
 const parseTarget = (target: ReactScrollEventTarget) => {
   if (typeof target === "number") {
@@ -39,6 +44,7 @@ export const useScrollHandler = (opts: {
     effect: ScrollEffect;
   }[];
 }) => {
+  const handlerRef = React.useRef<ScrollHandler | null>(null);
   const effectDependency = Object.keys(opts).reduce(
     (acc, key) => {
       acc += key;
@@ -73,10 +79,13 @@ export const useScrollHandler = (opts: {
       handler.when(condition, effect)
     );
     handler.enable();
+    handlerRef.current = handler;
 
     return () => {
       handler.disable();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [effectDependency]);
+
+  return handlerRef.current;
 };
