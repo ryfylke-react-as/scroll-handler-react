@@ -1,6 +1,6 @@
 {
   "name": "@ryfylke-react/scroll-handler-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React hook for using @ryfylke-react/scroll-handler.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -29,7 +29,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@ryfylke-react/scroll-handler": "^1.0.22",
+    "@ryfylke-react/scroll-handler": "^1.0.23",
     "tslib": "^2.5.0"
   },
   "peerDependencies": {

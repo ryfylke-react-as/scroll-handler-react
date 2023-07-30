@@ -74,10 +74,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@ryfylke-react/scroll-handler@^1.0.22":
-  "integrity" "sha512-FMmsy1bSkUs+ST3ald0vfpEnoMdDxuwAlfGGVEAA82JqmIItvA9CaYAo/+qgQkjPlrod00e1E2m6w4IMRzpllg=="
-  "resolved" "https://registry.npmjs.org/@ryfylke-react/scroll-handler/-/scroll-handler-1.0.22.tgz"
-  "version" "1.0.22"
+"@ryfylke-react/scroll-handler@^1.0.23":
+  "integrity" "sha512-IiArvgA+s6BALb32JxSGgUXdF4EG+7p1+bJLnqDU16hf/i7W8CG50/mblQI4ltEQKv1kzd4i+yQYNySdolFq/A=="
+  "resolved" "https://registry.npmjs.org/@ryfylke-react/scroll-handler/-/scroll-handler-1.0.23.tgz"
+  "version" "1.0.23"
   dependencies:
     "tslib" "^2.6.0"
 
