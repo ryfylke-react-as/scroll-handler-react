@@ -1,21 +1,20 @@
 import {
-  ScrollHandler as _ScrollHandler,
+  ScrollHandler,
   ScrollEffect,
   BetweenScrollEffect,
 } from "@ryfylke-react/scroll-handler";
 import React from "react";
 
-export class ScrollHandler extends _ScrollHandler {}
-
 type ReactScrollEventTarget =
-  | React.MutableRefObject<HTMLElement>
+  | React.MutableRefObject<HTMLElement | null>
+  | React.RefObject<HTMLElement | null>
   | number;
 
 const parseTarget = (target: ReactScrollEventTarget) => {
   if (typeof target === "number") {
     return target;
   }
-  return target.current;
+  return target.current ?? 0;
 };
 
 export const useScrollHandler = (opts: {

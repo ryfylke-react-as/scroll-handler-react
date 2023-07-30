@@ -1,6 +1,6 @@
 {
   "name": "@ryfylke-react/scroll-handler-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React hook for using @ryfylke-react/scroll-handler.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
