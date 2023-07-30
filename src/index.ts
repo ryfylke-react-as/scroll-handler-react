@@ -68,6 +68,7 @@ export const useScrollHandler = (opts: {
     opts.when?.forEach(({ condition, effect }) =>
       handler.when(condition, effect)
     );
+    handler.enable();
 
     return () => {
       handler.disable();
