@@ -14,7 +14,7 @@ const parseTarget = (target: ReactScrollEventTarget) => {
   if (typeof target === "number") {
     return target;
   }
-  return target.current ?? 0;
+  return target.current!;
 };
 
 export const useScrollHandler = (opts: {
